@@ -1,32 +1,14 @@
-import { motion, useDragControls } from "framer-motion";
+import { motion } from "framer-motion"
 
 const App = () => {
-  const controls = useDragControls();
-
-  const startDrag = (e) => {
-    controls.start(e, { snapToCursor: true });
-  };
-
   return (
-    <div onPointerDown={startDrag}>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        drag
-        dragListener={false}
-        dragControls={controls}
-        dragConstraints={{
-          top: 100,
-          left: 100,
-          right: 500,
-          bottom: 500,
-        }}
-        className="save-button"
-      >
-        Launch modal
-      </motion.button>
+    <div className="parent-div">
+      <motion.div className="container" 
+      whileHover={{scale: 1.2}}
+      whileTap={{ scale: 1.1 }}
+      drag dragConstraints={{left: -100, right: 100, top: -100, bottom:100}}/>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

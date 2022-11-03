@@ -1,10 +1,24 @@
 body {
-  background: #A0A0A0;
+  background: black;
+  margin: auto;
 }
 
-.save-button {
-  border: 1px solid black;
-  width: 10vw;
-  height: 10vh;
+.parent-div {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   background: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  height: 150px;
+  width: 150px;
 }/*# sourceMappingURL=index.css.map */
